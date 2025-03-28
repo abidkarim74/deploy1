@@ -27,6 +27,7 @@ app.use(
     origin: process.env.CLIENT_URL || "http://localhost:5173", // Use environment variable
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     credentials: true,
+    allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
 
