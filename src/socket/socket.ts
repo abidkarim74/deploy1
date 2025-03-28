@@ -7,7 +7,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: process.env.CLIENT_URL || "http://localhost:5173", // Use environment variable
+    origin: "https://front-apvxtvugg-abidkarim74s-projects.vercel.app/login", // Use environment variable
 
     methods: ["GET", "POST", "OPTIONS"],
      allowedHeaders: ["Content-Type", "Authorization"],
