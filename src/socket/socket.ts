@@ -10,6 +10,7 @@ const io = new Server(server, {
     origin: process.env.CLIENT_URL || "http://localhost:5173", // Use environment variable
 
     methods: ["GET", "POST", "OPTIONS"],
+     allowedHeaders: ["Content-Type", "Authorization"],
 
   },
 });
