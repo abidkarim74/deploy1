@@ -27,7 +27,6 @@ app.use(
     origin: "https://front-apvxtvugg-abidkarim74s-projects.vercel.app", // Use environment variable
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     credentials: true,
-    allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
 
