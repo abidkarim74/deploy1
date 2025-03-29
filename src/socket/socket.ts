@@ -7,7 +7,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "https://front-55nsi3qlh-abidkarim74s-projects.vercel.app", // Use environment variable
+    origin: "https://front-ealuuv8o7-abidkarim74s-projects.vercel.app", // Use environment variable
 
     methods: ["GET", "POST", "OPTIONS"],
 
