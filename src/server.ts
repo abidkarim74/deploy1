@@ -24,7 +24,7 @@ const PORT = process.env.PORT || 5000;
 // Middleware
 app.use(
   cors({
-    origin: "https://front-phkjkinwg-abidkarim74s-projects.vercel.app", // Use environment variable
+    origin: "https://front-cplzesr3l-abidkarim74s-projects.vercel.app", // Use environment variable
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     credentials: true,
   })
