@@ -4,7 +4,11 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon --watch src --exec node --loader ts-node/esm src/server.ts",
-    "start": "node src/server.ts"
+    "start": "node dist/server.js",
+    "build": "tsc && cp -r prisma dist/ && cp package.json dist/ && cp .env dist/",
+    "prisma:generate": "prisma generate",
+    "postinstall": "npm install && npm run prisma:generate && npm run build"
+  
   },
   "type": "module",
   "keywords": [],
