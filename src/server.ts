@@ -20,7 +20,6 @@ dotenv.config();
 // const app = express();
 const PORT = 8080;
 
-
 // Middleware
 app.use(cors({
   origin: "https://campus-carawan.up.railway.app",
