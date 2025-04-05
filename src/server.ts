@@ -30,7 +30,7 @@ app.use(cors({
 app.use(morgan("dev"));
 app.use(express.json());
 app.use(cookieParser());
-app.use("/uploads", express.static("uploads"));
+// app.use("/uploads", express.static("uploads"));
 
 
 

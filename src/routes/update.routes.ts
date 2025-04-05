@@ -1,23 +1,23 @@
 import { Response, Request, Router } from "express";
 import { updateUserProfilePic } from "../controllers/updateControllers.js";
 import verify from "../middleware/protectRoute.js";
-import multer from "multer";
-import path from "path";
+// import multer from "multer";
+// import path from "path";
 
-const storage = multer.diskStorage({
-  destination: "./uploads/",
-  filename: (req:Request, file, cb) => {
-    cb(null, Date.now() + path.extname(file.originalname));
-  },
-});
+// const storage = multer.diskStorage({
+//   destination: "./uploads/",
+//   filename: (req:Request, file, cb) => {
+//     cb(null, Date.now() + path.extname(file.originalname));
+//   },
+// });
 
 
 const router = Router();
-const upload = multer({ storage });
+// const upload = multer({ storage });
 
 
 
-router.put("/uploads-profilepic/:userId", verify, upload.single("profilePic"), updateUserProfilePic);
+router.put("/uploads-profilepic/:userId", verify, updateUserProfilePic);
 
 
 export default router;

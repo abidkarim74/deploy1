@@ -99,24 +99,24 @@ export const logoutFunc = async (req: Request, res: Response) => {
   return;
 }
 
+
 export const getAuthenticatedUser = async (req: Request, res: Response) => {
   if (!req.user) {
     res.status(401).json({ error: "User not authenticated" });
     return;
   }
-
-  console.log("Authenticated User:", req.user);
-
   try {
     const authUser = await prisma.user.findUnique({
       where: { id: req.user.id },
-      select: { id: true, username: true, fullname: true, profilePic: true },
+      select: { id: true, username: true, fullname: true, profilePic: true, driver:true },
     });
+
 
     if (!authUser) {
       res.status(404).json({ error: "User not found" });
       return;
     }
+    // console.log(authUser);
 
     res.json(authUser);
   } catch (error) {
