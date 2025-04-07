@@ -88,10 +88,11 @@ export const getRideRequestPosts = async (req: Request, res: Response) => {
         time: { gte: twentyFourHoursAgo }, 
       },
       include: {
-        poster: { select: { id: true, username: true, fullname: true, profilePic:true } }, 
+        poster: { select: { id: true, username: true, fullname: true, profilePic:true, reviews:true, vehicles:true } }, 
       },
       orderBy: { time: "desc" }, 
     });
+    console.log(rideRequests[0]);
 
     res.status(200).json(rideRequests);
   } catch (error) {

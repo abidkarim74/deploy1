@@ -18,7 +18,7 @@ import { app, server } from "./socket/socket.js";
 dotenv.config();
 
 // const app = express();
-const PORT = 8080;
+const PORT = 5000;
 
 
 // Middleware
